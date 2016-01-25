@@ -42,7 +42,7 @@ def calculate_vector(im):
     if not isinstance(im, Image.Image):
         im = Image.open(im)  # 如果不是图像类型则以图像类型打开
     # re_p resize 的比例尺度
-    # size = im.size
+    # size = im.size    ｇｉｔ
     im = im.resize((8, 8), Image.ANTIALIAS).convert('RGB')
 
     xx = Counter([i for i in base_vector(4)])  # 将每一个可能都添加到统计中默认为１次（这个１是脏数据本省不存在的）后来要处理掉的
